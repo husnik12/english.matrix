@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechGlow Phones</title>
+  <title>TechGlow 2.0 - by Yuldashev Husniddin</title>
   <style>
     body {
       background-color: #000;
@@ -16,9 +16,81 @@
 
     h1 {
       text-align: center;
-      padding: 30px;
+      padding: 25px;
       text-shadow: 0 0 15px #0f0;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .phone {
+      background-color: rgba(0, 255, 0, 0.05);
+      border: 1px solid #0f0;
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 0 0 15px #0f0;
+      transition: 0.3s;
+    }
+
+    .phone:hover {
+      transform: scale(1.05);
+      background-color: rgba(0, 255, 0, 0.1);
+      box-shadow: 0 0 30px #0f0;
+    }
+
+    .phone img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #0f0;
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: #003300;
+      border: 2px solid #0f0;
+      color: #0f0;
+      border-radius: 25px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #0f0;
+    }
+
+    button:hover {
+      background-color: #0f0;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #0f0;
+    }
+
+    #info {
+      text-align: center;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      border: 1px solid #0f0;
+      border-radius: 15px;
+      display: none;
+      background-color: rgba(0, 255, 0, 0.05);
+      box-shadow: 0 0 20px #0f0;
+    }
+
+    footer {
+      text-align: center;
+      color: #0f0;
+      padding: 25px;
+      margin-top: 30px;
+      border-top: 1px solid #0f0;
+      box-shadow: 0 -2px 10px #0f0;
     }
 
     .glow {
@@ -32,106 +104,95 @@
     }
 
     @keyframes blink {
-      from { opacity: 0.1; box-shadow: 0 0 5px #0f0; }
+      from { opacity: 0.2; box-shadow: 0 0 5px #0f0; }
       to { opacity: 1; box-shadow: 0 0 20px #0f0; }
     }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px;
-    }
-
-    button {
-      background-color: #003300;
-      border: 2px solid #0f0;
-      color: #0f0;
-      border-radius: 25px;
-      padding: 15px 25px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #0f0;
-    }
-
-    button:hover {
-      background-color: #0f0;
-      color: #000;
-      transform: scale(1.05);
-      box-shadow: 0 0 25px #0f0;
-    }
-
-    .info-box {
-      display: none;
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(0, 255, 0, 0.1);
-      border: 1px solid #0f0;
-      border-radius: 15px;
-      margin: 20px;
-      box-shadow: 0 0 20px #0f0;
-    }
-
     @media (max-width: 600px) {
-      button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
+      .phone {
+        width: 160px;
       }
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>📱 TechGlow Phone Models</h1>
+  <h1>💡 TechGlow Phones 2.0</h1>
 
   <div class="container">
-    <button onclick="showInfo('iphone')">iPhone 15 Pro</button>
-    <button onclick="showInfo('samsung')">Samsung Galaxy S24</button>
-    <button onclick="showInfo('redmi')">Redmi Note 13 Pro</button>
-    <button onclick="showInfo('huawei')">Huawei P60</button>
-    <button onclick="showInfo('vivo')">Vivo Y36</button>
+    <div class="phone">
+      <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg" alt="iPhone 15 Pro">
+      <h3>iPhone 15 Pro</h3>
+      <button onclick="showInfo('iphone')">Details</button>
+    </div>
+    <div class="phone">
+      <img src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-1.jpg" alt="Galaxy S24">
+      <h3>Samsung Galaxy S24</h3>
+      <button onclick="showInfo('samsung')">Details</button>
+    </div>
+    <div class="phone">
+      <img src="https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-13-pro-1.jpg" alt="Redmi Note 13 Pro">
+      <h3>Redmi Note 13 Pro</h3>
+      <button onclick="showInfo('redmi')">Details</button>
+    </div>
+    <div class="phone">
+      <img src="https://fdn2.gsmarena.com/vv/pics/huawei/huawei-p60-1.jpg" alt="Huawei P60">
+      <h3>Huawei P60</h3>
+      <button onclick="showInfo('huawei')">Details</button>
+    </div>
+    <div class="phone">
+      <img src="https://fdn2.gsmarena.com/vv/pics/vivo/vivo-y36-1.jpg" alt="Vivo Y36">
+      <h3>Vivo Y36</h3>
+      <button onclick="showInfo('vivo')">Details</button>
+    </div>
   </div>
 
-  <div id="info" class="info-box"></div>
+  <div id="info"></div>
+
+  <div style="text-align:center;">
+    <button onclick="comparePhones()">📊 Compare Phones</button>
+  </div>
+
+  <footer>
+    <p>⚡ Created by <strong>Yuldashev Husniddin</strong> — a young developer passionate about technology and innovation ⚡</p>
+  </footer>
 
   <script>
     const phones = {
       iphone: {
         name: "iPhone 15 Pro",
-        ram: "8 GB RAM",
-        storage: "256 GB Storage",
+        ram: "8 GB",
+        storage: "256 GB",
         chip: "A17 Pro Chip",
         price: "$1199"
       },
       samsung: {
         name: "Samsung Galaxy S24",
-        ram: "12 GB RAM",
-        storage: "512 GB Storage",
+        ram: "12 GB",
+        storage: "512 GB",
         chip: "Snapdragon 8 Gen 3",
         price: "$999"
       },
       redmi: {
         name: "Redmi Note 13 Pro",
-        ram: "8 GB RAM",
-        storage: "256 GB Storage",
+        ram: "8 GB",
+        storage: "256 GB",
         chip: "Helio G99 Ultra",
         price: "$399"
       },
       huawei: {
         name: "Huawei P60",
-        ram: "12 GB RAM",
-        storage: "512 GB Storage",
+        ram: "12 GB",
+        storage: "512 GB",
         chip: "Kirin 9000",
         price: "$899"
       },
       vivo: {
         name: "Vivo Y36",
-        ram: "8 GB RAM",
-        storage: "128 GB Storage",
+        ram: "8 GB",
+        storage: "128 GB",
         chip: "Snapdragon 680",
         price: "$299"
       }
@@ -150,8 +211,20 @@
       `;
     }
 
-    // Random LED glow dots
-    for (let i = 0; i < 80; i++) {
+    function comparePhones() {
+      const infoBox = document.getElementById('info');
+      infoBox.style.display = 'block';
+      infoBox.innerHTML = `
+        <h2>📊 Phone Comparison</h2>
+        <p><strong>Most Powerful:</strong> iPhone 15 Pro (A17 Pro Chip)</p>
+        <p><strong>Best Camera:</strong> Samsung Galaxy S24</p>
+        <p><strong>Best Value:</strong> Redmi Note 13 Pro</p>
+        <p><strong>Budget Pick:</strong> Vivo Y36</p>
+      `;
+    }
+
+    // LED dots
+    for (let i = 0; i < 60; i++) {
       const dot = document.createElement('div');
       dot.classList.add('glow');
       dot.style.left = Math.random() * 100 + 'vw';

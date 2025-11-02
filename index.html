@@ -1,237 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechGlow 2.0 - by Yuldashev Husniddin</title>
+  <title>Phone Matrix</title>
   <style>
     body {
-      background-color: #000;
-      color: #0f0;
-      font-family: 'Courier New', monospace;
       margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000814;
+      color: #00bfff;
       overflow-x: hidden;
     }
 
     h1 {
       text-align: center;
-      padding: 25px;
-      text-shadow: 0 0 15px #0f0;
-      font-size: 2.3rem;
+      font-size: 2.5em;
+      color: #00bfff;
+      text-shadow: 0 0 20px #00bfff, 0 0 40px #0088ff;
+      margin-top: 20px;
     }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px;
+    .phone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 30px;
     }
 
     .phone {
-      background-color: rgba(0, 255, 0, 0.05);
-      border: 1px solid #0f0;
+      background: rgba(0, 20, 40, 0.8);
+      border: 1px solid #00bfff;
       border-radius: 20px;
       padding: 15px;
       text-align: center;
-      width: 200px;
-      box-shadow: 0 0 15px #0f0;
-      transition: 0.3s;
+      box-shadow: 0 0 15px #0077cc;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     .phone:hover {
-      transform: scale(1.05);
-      background-color: rgba(0, 255, 0, 0.1);
-      box-shadow: 0 0 30px #0f0;
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px #00bfff, 0 0 60px #0077ff;
     }
 
-    .phone img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #0f0;
+    .phone h3 {
+      color: #00d5ff;
+      margin: 10px 0 5px;
     }
 
-    button {
-      margin-top: 10px;
-      background-color: #003300;
-      border: 2px solid #0f0;
-      color: #0f0;
-      border-radius: 25px;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #0f0;
+    .phone p {
+      color: #cceeff;
+      font-size: 0.9em;
     }
 
-    button:hover {
-      background-color: #0f0;
-      color: #000;
-      transform: scale(1.05);
-      box-shadow: 0 0 25px #0f0;
-    }
-
-    #info {
+    .footer {
       text-align: center;
-      padding: 20px;
-      margin: 20px auto;
-      width: 80%;
-      border: 1px solid #0f0;
-      border-radius: 15px;
-      display: none;
-      background-color: rgba(0, 255, 0, 0.05);
-      box-shadow: 0 0 20px #0f0;
-    }
-
-    footer {
-      text-align: center;
-      color: #0f0;
-      padding: 25px;
-      margin-top: 30px;
-      border-top: 1px solid #0f0;
-      box-shadow: 0 -2px 10px #0f0;
-    }
-
-    .glow {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #0f0;
-      border-radius: 50%;
-      animation: blink 2s infinite ease-in-out alternate;
-      opacity: 0.6;
+      color: #0099ff;
+      padding: 15px;
+      font-size: 0.9em;
+      text-shadow: 0 0 10px #0088ff;
     }
 
     @keyframes blink {
-      from { opacity: 0.2; box-shadow: 0 0 5px #0f0; }
-      to { opacity: 1; box-shadow: 0 0 20px #0f0; }
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
     }
 
-    @media (max-width: 600px) {
-      .phone {
-        width: 160px;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
+    .led {
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      background: #00bfff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+      animation: blink 2s infinite;
     }
   </style>
 </head>
 <body>
-  <h1>💡 TechGlow Phones 2.0</h1>
+  <h1>📱 Phone Matrix</h1>
 
-  <div class="container">
+  <div class="phone-grid">
     <div class="phone">
-      <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg" alt="iPhone 15 Pro">
       <h3>iPhone 15 Pro</h3>
-      <button onclick="showInfo('iphone')">Details</button>
+      <p>RAM: 8GB<br>Memory: 256GB<br>Chip: A17 Pro</p>
     </div>
     <div class="phone">
-      <img src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-1.jpg" alt="Galaxy S24">
-      <h3>Samsung Galaxy S24</h3>
-      <button onclick="showInfo('samsung')">Details</button>
+      <h3>Samsung S24 Ultra</h3>
+      <p>RAM: 12GB<br>Memory: 512GB<br>Chip: Snapdragon 8 Gen 3</p>
     </div>
     <div class="phone">
-      <img src="https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-13-pro-1.jpg" alt="Redmi Note 13 Pro">
-      <h3>Redmi Note 13 Pro</h3>
-      <button onclick="showInfo('redmi')">Details</button>
+      <h3>Redmi Note 13 Pro+</h3>
+      <p>RAM: 12GB<br>Memory: 256GB<br>Chip: Dimensity 7200 Ultra</p>
     </div>
     <div class="phone">
-      <img src="https://fdn2.gsmarena.com/vv/pics/huawei/huawei-p60-1.jpg" alt="Huawei P60">
-      <h3>Huawei P60</h3>
-      <button onclick="showInfo('huawei')">Details</button>
-    </div>
-    <div class="phone">
-      <img src="https://fdn2.gsmarena.com/vv/pics/vivo/vivo-y36-1.jpg" alt="Vivo Y36">
-      <h3>Vivo Y36</h3>
-      <button onclick="showInfo('vivo')">Details</button>
+      <h3>Google Pixel 8</h3>
+      <p>RAM: 8GB<br>Memory: 128GB<br>Chip: Tensor G3</p>
     </div>
   </div>
 
-  <div id="info"></div>
-
-  <div style="text-align:center;">
-    <button onclick="comparePhones()">📊 Compare Phones</button>
-  </div>
-
-  <footer>
-    <p>⚡ Created by <strong>Yuldashev Husniddin</strong> — a young developer passionate about technology and innovation ⚡</p>
-  </footer>
+  <div class="footer">© 2025 Husniddin’s Tech Matrix</div>
 
   <script>
-    const phones = {
-      iphone: {
-        name: "iPhone 15 Pro",
-        ram: "8 GB",
-        storage: "256 GB",
-        chip: "A17 Pro Chip",
-        price: "$1199"
-      },
-      samsung: {
-        name: "Samsung Galaxy S24",
-        ram: "12 GB",
-        storage: "512 GB",
-        chip: "Snapdragon 8 Gen 3",
-        price: "$999"
-      },
-      redmi: {
-        name: "Redmi Note 13 Pro",
-        ram: "8 GB",
-        storage: "256 GB",
-        chip: "Helio G99 Ultra",
-        price: "$399"
-      },
-      huawei: {
-        name: "Huawei P60",
-        ram: "12 GB",
-        storage: "512 GB",
-        chip: "Kirin 9000",
-        price: "$899"
-      },
-      vivo: {
-        name: "Vivo Y36",
-        ram: "8 GB",
-        storage: "128 GB",
-        chip: "Snapdragon 680",
-        price: "$299"
-      }
+    // Neon LED flicker background effect
+    const createLed = () => {
+      const led = document.createElement("div");
+      led.className = "led";
+      led.style.top = Math.random() * window.innerHeight + "px";
+      led.style.left = Math.random() * window.innerWidth + "px";
+      led.style.animationDuration = (1 + Math.random() * 2) + "s";
+      document.body.appendChild(led);
+      setTimeout(() => led.remove(), 3000);
     };
 
-    function showInfo(model) {
-      const infoBox = document.getElementById('info');
-      const phone = phones[model];
-      infoBox.style.display = 'block';
-      infoBox.innerHTML = `
-        <h2>${phone.name}</h2>
-        <p><strong>RAM:</strong> ${phone.ram}</p>
-        <p><strong>Storage:</strong> ${phone.storage}</p>
-        <p><strong>Chipset:</strong> ${phone.chip}</p>
-        <p><strong>Price:</strong> ${phone.price}</p>
-      `;
-    }
-
-    function comparePhones() {
-      const infoBox = document.getElementById('info');
-      infoBox.style.display = 'block';
-      infoBox.innerHTML = `
-        <h2>📊 Phone Comparison</h2>
-        <p><strong>Most Powerful:</strong> iPhone 15 Pro (A17 Pro Chip)</p>
-        <p><strong>Best Camera:</strong> Samsung Galaxy S24</p>
-        <p><strong>Best Value:</strong> Redmi Note 13 Pro</p>
-        <p><strong>Budget Pick:</strong> Vivo Y36</p>
-      `;
-    }
-
-    // LED dots
-    for (let i = 0; i < 60; i++) {
-      const dot = document.createElement('div');
-      dot.classList.add('glow');
-      dot.style.left = Math.random() * 100 + 'vw';
-      dot.style.top = Math.random() * 100 + 'vh';
-      dot.style.animationDelay = Math.random() * 3 + 's';
-      document.body.appendChild(dot);
-    }
+    setInterval(createLed, 150);
   </script>
 </body>
 </html>

@@ -5,60 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Purple Galaxy Phones</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at 20% 20%, #2b0052, #000);
+      background: radial-gradient(circle at center, #2a004f, #000);
       color: #e0b3ff;
       overflow-x: hidden;
+    }
+
+    /* Kosmik fon */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.ibb.co/YpGBVZZ/galaxy-space-bg.gif');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.25;
+      z-index: -1;
     }
 
     h1 {
       text-align: center;
       font-size: 2.5em;
-      color: #d580ff;
-      text-shadow: 0 0 20px #a64dff, 0 0 40px #ffb3ff;
-      margin-top: 20px;
+      color: #e0aaff;
+      text-shadow: 0 0 25px #d580ff, 0 0 50px #a64dff;
+      margin-top: 30px;
     }
 
     .phone-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
       padding: 40px;
     }
 
     .phone {
-      background: rgba(50, 0, 90, 0.8);
-      border: 1px solid #b366ff;
+      background: rgba(60, 0, 110, 0.75);
+      border: 1px solid #bb77ff;
       border-radius: 20px;
       padding: 20px;
       text-align: center;
-      box-shadow: 0 0 20px #b366ff;
-      transition: all 0.3s ease;
+      box-shadow: 0 0 25px #b366ff;
+      transition: 0.3s;
       cursor: pointer;
     }
 
     .phone:hover {
-      transform: translateY(-8px);
+      transform: translateY(-8px) scale(1.05);
       box-shadow: 0 0 40px #c080ff, 0 0 80px #a64dff;
     }
 
     .phone img {
-      width: 140px;
-      height: 160px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #bb77ff;
+      width: 150px;
+      height: 170px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #b366ff;
+      margin-bottom: 10px;
     }
 
     .phone h3 {
-      color: #f0c6ff;
-      margin: 10px 0 5px;
+      color: #ffb3ff;
+      margin-bottom: 5px;
       text-shadow: 0 0 10px #d580ff;
     }
 
     .phone p {
-      color: #e5ccff;
+      color: #f0d6ff;
       font-size: 0.9em;
     }
 
@@ -69,56 +85,39 @@
       font-size: 0.9em;
       text-shadow: 0 0 10px #a64dff;
     }
-
-    @keyframes stars {
-      from {background-position: 0 0;}
-      to {background-position: 1000px 1000px;}
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://i.ibb.co/zHbmbtS/galaxy-bg.jpg');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.2;
-      z-index: -1;
-      animation: stars 50s linear infinite;
-    }
   </style>
 </head>
 <body>
-  <h1>🌌 Purple Galaxy Phones</h1>
+
+  <h1>💜 Purple Galaxy — Phones Universe 🌌</h1>
 
   <div class="phone-grid">
     <div class="phone">
-      <img src="https://i.ibb.co/TLsmntV/redmi8.jpg" alt="Redmi 8">
+      <img src="https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-8-1.jpg" alt="Redmi 8">
       <h3>Redmi 8</h3>
-      <p>RAM: 4GB<br>Memory: 64GB<br>Chip: Snapdragon 439</p>
+      <p>RAM: 4GB<br>Memory: 64GB<br>Chip: Snapdragon 439<br>Battery: 5000mAh</p>
     </div>
 
     <div class="phone">
-      <img src="https://i.ibb.co/QnVJpzW/redmi10.jpg" alt="Redmi 10">
+      <img src="https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-10-2021-1.jpg" alt="Redmi 10">
       <h3>Redmi 10</h3>
-      <p>RAM: 6GB<br>Memory: 128GB<br>Chip: Helio G88</p>
+      <p>RAM: 6GB<br>Memory: 128GB<br>Chip: Helio G88<br>Battery: 5000mAh</p>
     </div>
 
     <div class="phone">
-      <img src="https://i.ibb.co/F6PvZ0R/infinix-hot30play.jpg" alt="Infinix Hot 30 Play">
+      <img src="https://fdn2.gsmarena.com/vv/pics/infinix/infinix-hot30-play-1.jpg" alt="Infinix Hot 30 Play">
       <h3>Infinix Hot 30 Play</h3>
-      <p>RAM: 8GB<br>Memory: 128GB<br>Chip: Helio G37</p>
+      <p>RAM: 8GB<br>Memory: 128GB<br>Chip: Helio G37<br>Battery: 6000mAh</p>
     </div>
 
     <div class="phone">
-      <img src="https://i.ibb.co/vQWmXkh/galaxy-a56.jpg" alt="Galaxy A56">
+      <img src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a55-5g-1.jpg" alt="Galaxy A56">
       <h3>Galaxy A56</h3>
-      <p>RAM: 8GB<br>Memory: 256GB<br>Chip: Exynos 1480</p>
+      <p>RAM: 8GB<br>Memory: 256GB<br>Chip: Exynos 1480<br>Battery: 5000mAh</p>
     </div>
   </div>
 
-  <div class="footer">© 2025 Husniddin’s Purple Galaxy</div>
+  <div class="footer">© 2025 Husniddin's Purple Galaxy | Designed with 💜</div>
+
 </body>
 </html>
